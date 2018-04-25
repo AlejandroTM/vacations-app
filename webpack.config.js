@@ -65,6 +65,10 @@ const webpackCommon = {
       from: './node_modules/jquery/**/*.*',
       to: './node_modules'
     }]),
+    new CopyWebpackPlugin([{
+      from: './google39b2f84f5b94bce9.html',
+      to: './google39b2f84f5b94bce9.html'
+    }]),
   ],
   resolve: {
     modules: [

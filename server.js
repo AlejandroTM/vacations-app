@@ -9,6 +9,9 @@ console.log(__dirname);
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/node_modules'));
 
+app.get('/google39b2f84f5b94bce9.html', function(){
+    res.sendFile(path.join(__dirname+'/public/google39b2f84f5b94bce9.html'));
+})
 app.get('/*', function(req,res) {
     res.sendFile(path.join(__dirname+'/public/index.html'));
 });
