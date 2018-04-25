@@ -1,0 +1,8 @@
+<div class="col-sm">
+    <h4><u>Periodos disfrutados/apuntados</u></h4>
+</div>
+<dl class="col-sm">
+    <% _.each(spentHolidays, function(holiday){ %>
+        <dd>Vacaciones desde: <b><%- holiday.startDate%></b> hasta <b><%- holiday.endDate%></b></dd>
+    <% }); %>
+</div>

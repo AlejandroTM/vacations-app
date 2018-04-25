@@ -1,0 +1,8 @@
+<div class="col-sm">
+    <h4><u>Pendientes de apuntar</u></h4>
+</div>
+<dl class="col-sm">
+    <% _.each(pendingHolidays, function(holiday){ %>
+        <dd>Solicitud desde: <b><%- holiday.startDate%></b> hasta <b><%- holiday.endDate%></b></dd>
+    <% }); %>
+</dl>
