@@ -88,7 +88,7 @@ export default Marionette.View.extend({
       }else{
         window.CONFIG.loggedIn = true;
         const idToken = googleUser.getAuthResponse().id_token;
-        channel.request('validate:token', { url: 'http://localhost:9080/login', method: 'POST', body: { idToken: idToken } });
+        channel.request('validate:token', { url: window.KAIROS_CONF.URL + '/login', method: 'POST', body: { idToken: idToken } });
       }
     }  
   },
