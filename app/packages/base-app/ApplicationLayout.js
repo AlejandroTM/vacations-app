@@ -1,8 +1,6 @@
 import Marionette from 'backbone.marionette';
 import HeaderView from 'packages/header/HeaderView';
-import MenuView from 'packages/menu/MenuView';
 import FooterView from 'packages/footer/FooterView';
-import MenuListView from 'packages/menu-list/MenuListView';
 import ApplicationEventController from './channel/ApplicationEventController';
 import appTemplate from './templates/app-layout.jst';
 import Radio from 'backbone.radio';
@@ -57,7 +55,6 @@ export default Marionette.View.extend({
 
   showBaseApp: function(){
     this.showView( HeaderView, 'headerRegion' );
-    this.showView( MenuView, 'menuRegion' );
     this.showView( FooterView, 'footerRegion' );
   },
 
