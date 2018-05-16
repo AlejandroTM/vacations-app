@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "npm run build && node server.js",
-    "start2": "webpack-dev-server --open",
+    "start-webpack": "webpack-dev-server --open",
     "prebuild": "rm -rf ./public/",
     "build": "npm run lint && webpack -p",
     "lint": "eslint app",
