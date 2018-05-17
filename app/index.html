@@ -28,7 +28,8 @@
 
   <!-- Google login -->
   <script src="https://apis.google.com/js/platform.js"></script>
-  <meta name="google-signin-client_id" content="968561356994-2krhtmu41b03no95ea0vn1ef4fn951rf.apps.googleusercontent.com">
+  <meta name="google-signin-client_id" content="391465752953-3tcok1vqo56nb7f7h3soo4060ni72q3a.apps.googleusercontent.com">
+  <!--meta name="google-signin-client_id" content="968561356994-2krhtmu41b03no95ea0vn1ef4fn951rf.apps.googleusercontent.com"-->
   <!-- End Google login -->
 
   <script type="text/javascript">
@@ -36,6 +37,21 @@
     //window.KAIROS_CONF.URL = 'https://limitless-refuge-19140.herokuapp.com'
     window.KAIROS_CONF.URL = 'http://localhost:9080'
   </script>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBjJYKWw03IMBwfMjv6QdDyfv1ltTqdFUA",
+    authDomain: "kairos-employees.firebaseapp.com",
+    databaseURL: "https://kairos-employees.firebaseio.com",
+    projectId: "kairos-employees",
+    storageBucket: "kairos-employees.appspot.com",
+    messagingSenderId: "391465752953"
+  };
+  window.firebaseApp = firebase.initializeApp(config);
+</script>
   
   <script src="app.js"></script>
   

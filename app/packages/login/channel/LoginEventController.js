@@ -37,7 +37,6 @@ export default Marionette.Object.extend({
     },
 
     onSuccess: function(response){
-        debugger;
         this.triggerByChannel(this.radioResponses.tokenOK, response.data);
     },
 
