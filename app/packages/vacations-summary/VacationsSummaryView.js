@@ -8,6 +8,7 @@ import VacationsSpentHolidaysView from './VacationsSpentHolidaysView';
 
 
 const channel = Radio.channel('vacations-summary:channel');
+const appChannel = Radio.channel('app:channel');
 
 export default Marionette.View.extend({
 
@@ -17,7 +18,13 @@ export default Marionette.View.extend({
       channel: channel,
       events: {
         'reply:vacations:summary': 'onSummaryRetrieved',
-        'reply:client:info': 'onClientInfoRetrieved'
+        //'reply:client:info': 'onClientInfoRetrieved'
+      }
+    },
+    {
+      channel: appChannel,
+      events: {
+        'reply:get:client:info': 'onClientInfoRetrieved'
       }
     }
   ],
@@ -71,6 +78,7 @@ export default Marionette.View.extend({
 
   onRender: function(){
     this.retrieveClientData();
+    appChannel.request('app:user:info', { key: 'Mail', value: this.userEmail});
   },
 
   retrieveClientData: function(){

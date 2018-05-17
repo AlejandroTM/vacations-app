@@ -116,7 +116,7 @@ export default Marionette.View.extend({
     const credential = firebase.auth.GoogleAuthProvider.credential(
       this.idToken);
     firebase.auth().signInWithCredential(credential).then((ok)=>{
-      console.log(ok);
+      console.log('[Firebase] Connection done.');
     }).catch((err)=>{
       console.error(JSON.stringify(err, null, 4));
     });
